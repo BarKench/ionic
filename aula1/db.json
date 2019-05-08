@@ -16,6 +16,14 @@
       "quant": 12,
       "valor": 1234,
       "id": 1
+    },
+    {
+      "ativo": true,
+      "nome": "Telefone",
+      "descricao": "telefone muito bom",
+      "quant": 1,
+      "valor": 123456,
+      "id": 2
     }
   ]
 }

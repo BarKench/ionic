@@ -1,0 +1,22 @@
+<div class="container" *ngIf="produtos$ | async as produtos">
+        <table class="table">
+          <tr>
+            <th>Nome</th>
+            <th>Descricao</th>
+            <th>Quant</th>
+            <th>Valor</th>
+            <th>Ativo</th>
+            <th><i class="fas fa-pen"></i></th>
+            <th><i class="fas fa-trash-alt"></i></th>
+          </tr>
+          <div *ngFor="let produto of produtos; index as id">
+            <td>{{produto.nome}}</td>
+            <td>{{produto.descricao}}</td>
+            <td>{{produto.quant}}</td>
+            <td>{{produto.valor}}</td>
+            <td>{{produto.ativo}}</td>
+            <td (click)="edit(produto.id, produto)" style="cursor: pointer"><i class="fas fa-pen"></i></td>
+            <td (click)="remover(produto.id)" style="cursor: pointer"><i class="fas fa-trash-alt"></i></td>
+          </div>
+        </table>
+      </div>
